@@ -23,6 +23,7 @@ const ScrollViewBottomEvent: FC<ScrollViewBottomEventProps> = ({ children, scrol
       <ScrollView
          onScroll={({ nativeEvent }) => onScrollEvent(nativeEvent)}
          scrollEventThrottle={400}
+         style={{ backgroundColor: "#000" }}
       >
          {
             children

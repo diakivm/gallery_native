@@ -5,10 +5,11 @@ export default class Utility {
    }
 
    static getHalfOfArray(array: any[], lessHalf: boolean): any[] {
+      let length = (array.length) / 2;
       if (lessHalf) {
-         return array.filter((item, index, arr) => index < arr.length / 2)
+         return array.filter((item, index) => index < length)
       } else {
-         return array.filter((item, index, arr) => index > arr.length / 2)
+         return array.filter((item, index) => index >= length)
       }
    }
 }

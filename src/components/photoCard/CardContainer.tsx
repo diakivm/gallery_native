@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
    containerCard: {
       flex: 1,
       width: "50%",
-      backgroundColor: "#111"
+      backgroundColor: "#000"
    }
 });
 
