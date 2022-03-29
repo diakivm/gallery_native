@@ -1,14 +1,11 @@
 import React from 'react';
-import 'react-native-gesture-handler'
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { Provider } from 'react-redux';
 import Navbar from './src/components/navbar/Navbar';
 import { store } from './src/store/store';
-import { createStackNavigator } from '@react-navigation/stack';
-import { publicRoutes, routeNames } from './src/router/routes';
+import AppRouter from './src/router/AppRouter';
 
-const Stack = createStackNavigator()
 
 
 export default function App() {
@@ -17,25 +14,7 @@ export default function App() {
     <NavigationContainer>
       <Provider store={store}>
         <View style={styles.container}>
-          <Stack.Navigator
-            initialRouteName={routeNames.HOME}
-            screenOptions={{
-              headerStyle: {
-                backgroundColor: '#000',
-              },
-              headerTintColor: '#fff',
-              headerTitleStyle: {
-                fontWeight: 'bold',
-              },
-            }}>
-
-            {
-              publicRoutes.map((route) => (
-                <Stack.Screen key={route.name} name={route.name} component={route.component} />
-              ))
-            }
-
-          </Stack.Navigator>
+          <AppRouter />
         </View>
         <Navbar />
       </Provider>

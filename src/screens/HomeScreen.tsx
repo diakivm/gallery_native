@@ -1,7 +1,7 @@
 import React, { FC } from 'react'
 import { View, StyleSheet, ActivityIndicator } from 'react-native'
 import ScrollViewBottomEvent from '../components/other/ScrollViewBottomEvent/ScrollViewBottomEvent'
-import CardContainer from '../components/photoCard/CardContainer'
+import CardContainer from '../components/card/CardContainer'
 import { useAction } from '../hooks/useAction'
 import { useTypeSelector } from '../hooks/useTypeSelector'
 import other from '../utils/Utility'

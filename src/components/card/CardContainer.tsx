@@ -1,5 +1,5 @@
 import React, { FC } from 'react'
-import { View, Text, Image, StyleSheet, ScrollView } from 'react-native'
+import { View, StyleSheet } from 'react-native'
 import IPhoto from '../../models/IPhoto'
 import CardPhoto from './CardPhoto'
 
